@@ -33,7 +33,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":user-api"))
     implementation(project(":platform-any-tool"))
 
     implementation(libs.koin.android)

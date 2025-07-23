@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":user-impl"))
     implementation(project(":abstractfeature"))
 
     implementation(libs.androidx.core.ktx)

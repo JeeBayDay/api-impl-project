@@ -33,6 +33,10 @@ android {
 }
 
 dependencies {
+    implementation(project(":user-impl"))
+    implementation(project(":platform-any-tool"))
+
+    implementation(libs.koin.android)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

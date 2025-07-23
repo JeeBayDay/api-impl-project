@@ -1,12 +1,12 @@
 package com.example.user.data.datasources
 
 import com.example.platform.any_tool.StringUtils
-import com.example.user.domain.entities.User
+import com.example.user.data.entities.DataUser
 
 internal class UserRemoteDataSourceImpl : UserRemoteDataSource {
-    override suspend fun getUser(userId: User.Id): Result<User> {
+    override suspend fun getUser(userId: DataUser.Id): Result<DataUser> {
         return Result.success(
-            User(
+            DataUser(
                 id = userId,
                 name = "John Doe",
                 email = StringUtils.toLowerCase("JohnDoe@johndoe.com")
@@ -14,7 +14,7 @@ internal class UserRemoteDataSourceImpl : UserRemoteDataSource {
         )
     }
 
-    override suspend fun rename(userId: User.Id, newName: String): Result<Unit> {
+    override suspend fun rename(userId: DataUser.Id, newName: String): Result<Unit> {
         return Result.success(Unit)
     }
 }
